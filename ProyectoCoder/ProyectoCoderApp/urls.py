@@ -15,20 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-
-from ProyectoCoderApp.views import *
+from .views import * #acá importamos todas las views de este directorio (ProyectoCoderApp)
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', inicio),
-    path('crearpython/',crear_curso),
-    path('coderapp/',include('ProyectoCoderApp.urls')) #en esta linea le indicamos que vaya a la app, e importe todas las urls!!!!!!!
+    path('profesores/',profesores), 
+    path('cursos/',cursos), 
+    path('entregables/',entregables), 
+    path('estudiantes/',estudiantes),
 ]
-
-#muchas aplicaciones
-#profes, estu, cursos, entregables+
-
-#chat
-#mensajes, canales, fijados 
-
-#Todo esto nos obligaria a crear MUCHAS URLS, entonces en cambio creamos  en una linea todas las URLS de la app (línea 25).

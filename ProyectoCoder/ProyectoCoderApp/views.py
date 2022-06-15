@@ -28,7 +28,7 @@ def crear_curso(request):
 
     lista_cursos = [x.nombre for x in Curso.objects.all()] # para obtener los nombres de los cursos y listarlos
 
-    return HttpResponse(f"Cursos: {str(lista_cursos)}")+
+    return HttpResponse(f"Cursos: {str(lista_cursos)}")
 
 def profesores(request):
 
