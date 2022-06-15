@@ -31,23 +31,25 @@ def crear_curso(request):
 
 def profesores(request):
 
-    pass
+    
     return HttpResponse("Vista de profe")
 
 
 def estudiantes(request):
 
-    pass
+    
     return HttpResponse("Vista de estudiantes")
 
     
 def cursos(request):
 
-    pass
-    return HttpResponse("Vista de cursos")
-
+    cursos = Curso().objects.all
+    
+    # return HttpResponse("Vista de cursos")
+    return render(request,"ProyectoCoderApp/cursos.html",{'cursos':cursos}) #acá hacemos que cuando entremos al localhost: nos devuelve un diccionario 
+    #que contiene todas las variables dentro del objeto cursos. Luego, en el html "cursos" los mostramos.
 
 def entregables(request):
 
-    pass
+    
     return HttpResponse("Vista de entregables")
