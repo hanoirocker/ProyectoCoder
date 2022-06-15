@@ -22,7 +22,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', inicio),
     path('crearpython/',crear_curso),
-    path('coderapp/',include('ProyectoCoderApp.urls')) #en esta linea le indicamos que vaya a la app, e importe todas las urls!!!!!!!
+    path('coderapp/',include('ProyectoCoderApp.urls')), #en esta linea le indicamos que vaya a la app, e importe todas las urls!!!!!!!
+    #path('auth/',include('auth.urls')), #estas podrían ser las URLS de autenticación si las tuviésemos. También irian acá en la carpeta ppal.
 ]
 
 #muchas aplicaciones
