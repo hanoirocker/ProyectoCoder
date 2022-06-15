@@ -28,4 +28,27 @@ def crear_curso(request):
 
     lista_cursos = [x.nombre for x in Curso.objects.all()] # para obtener los nombres de los cursos y listarlos
 
-    return HttpResponse(f"Cursos: {str(lista_cursos)}")
+    return HttpResponse(f"Cursos: {str(lista_cursos)}")+
+
+def profesores(request):
+
+    pass
+    return HttpResponse("Vista de profe")
+
+
+def estudiantes(request):
+
+    pass
+    return HttpResponse("Vista de estudiantes")
+
+    
+def cursos(request):
+
+    pass
+    return HttpResponse("Vista de cursos")
+
+
+def entregables(request):
+
+    pass
+    return HttpResponse("Vista de entregables")
